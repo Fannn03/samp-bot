@@ -4,3 +4,4 @@ SERVER_PORT=
 # discord configuration
 BOT_ID=
 BOT_TOKEN=
+BOT_PREFIX=
