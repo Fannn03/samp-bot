@@ -4,7 +4,7 @@ import registerUcpMiddleware from "../../middleware/register-ucp-middleware.js"
 import { registerUcp } from "../../repositories/ucp.js"
 import { registerUcpDirectMessage } from "../messages/register-ucp.js"
 
-export const registerUcpForm = async (interaction) => {
+export const registerUcpService = async (interaction) => {
   const username = interaction.fields.getTextInputValue('username')
   const password = interaction.fields.getTextInputValue('password')
 

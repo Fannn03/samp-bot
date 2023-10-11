@@ -1,6 +1,6 @@
 import { ButtonInteraction, ModalSubmitInteraction } from "discord.js"
 import { registerUcpModal } from "../helper/modal/register-ucp.js"
-import { registerUcpForm } from "../helper/form/register-ucp.js";
+import { registerUcpService } from "../helper/service/register-ucp.js";
 
 export default async (interaction) => {
   const { customId } = interaction
@@ -10,6 +10,6 @@ export default async (interaction) => {
   }
   
   if(interaction instanceof ModalSubmitInteraction) {
-    if(customId === "register-ucp-modal") return registerUcpForm(interaction)
+    if(customId === "register-ucp-modal") return registerUcpService(interaction)
   }
 }
