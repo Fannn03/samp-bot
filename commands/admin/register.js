@@ -1,6 +1,6 @@
 import { ActionRowBuilder, EmbedBuilder } from 'discord.js'
 import 'dotenv/config'
-import { registerUcpMessage } from '../../helper/messages/register-ucp.js'
+import { registerUcpCommandMessage } from '../../helper/messages/register-ucp.js'
 import { registerUcpButton, registerCharacterButton } from '../../helper/button/register-button.js'
 
 export default {
@@ -14,7 +14,7 @@ export default {
     const embed = new EmbedBuilder()
       .setColor("Green")
       .setTitle("Registrasi Akun")
-      .setDescription(registerUcpMessage(process.env.CHANNEL_SUPPORT))
+      .setDescription(registerUcpCommandMessage(process.env.CHANNEL_SUPPORT))
       .setThumbnail(message.guild.iconURL())
     
     const buttons = new ActionRowBuilder()
