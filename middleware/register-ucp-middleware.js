@@ -1,8 +1,11 @@
 import Joi from "joi"
 
 export default async (request) => {
-
   const form = Joi.object({
+    id: Joi.string()
+      .required()
+      .empty()
+    ,
     username: Joi.string()
       .pattern(/^\S+$/)
       .messages({
