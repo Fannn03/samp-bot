@@ -4,13 +4,19 @@ import sequelize from '../config/database.js'
 export const Ucp = sequelize.define('ucps', {
   id: {
     type: Sequelize.STRING,
-    unique: true,
+    unique: {
+      args: true,
+      msg: "Akun sudah pernah terdaftar"
+    },
     primaryKey: true,
     allowNull: false
   },
   username: {
     type: Sequelize.STRING,
-    unique: true,
+    unique: {
+      args: true,
+      msg: "Username telah di pakai"
+    },
     allowNull: false
   },
   password: {
