@@ -22,7 +22,21 @@ module.exports = {
         type: Sequelize.ENUM("user", "junior helper", "senior helper", "junior admin", "senior admin", "head admin", "developer"),
         defaultValue: "user"
       },
-      createdat: {
+      golds: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+      },
+      points: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+      },
+      is_banned: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
+      createdAt: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.NOW,
         allowNull: false
